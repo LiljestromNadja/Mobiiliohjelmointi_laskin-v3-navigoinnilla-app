@@ -16,11 +16,8 @@ export default function Calculator({ navigation }) {
 
   const allclear = () => {
 
-    //setData([]);
     setResult('');
     setResultinfo('Syötä numerot ja valitse operaattori');
-    //setHistoryinfo('');
-
   }
 
 
@@ -56,14 +53,12 @@ export default function Calculator({ navigation }) {
             result = number1 / number2;
             break;
           }
-          //result = number1 /number2; //result == infinity
-          //break;
+          
       }
       setResult(result);
 
       const text =  `${number1} ${operator} ${number2} = ${result}`;
       setData([...data, text]);
-      //setData ([text, ...data]); //käänteinen järjestys 
     }
 
     setResultinfo('Result: ');

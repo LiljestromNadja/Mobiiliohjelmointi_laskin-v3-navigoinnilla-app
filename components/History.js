@@ -3,18 +3,7 @@ import { StyleSheet, Text, View, FlatList, Button, Alert } from 'react-native';
 
 export default function History({ route, navigation }) {
   const { data } = route.params; 
-
-  /*
-  const [historyinfo, setHistoryinfo] = useState('Historia');
-  
-  const allclear = () => {
-    
-    setHistoryinfo('Historia poistettu');
-    console.log(data); 
-    Alert.alert("ei vielä käytössä");
-  }
-  */
-  
+ 
   return (
     <View style={styles.container}>
         <FlatList
@@ -63,23 +52,4 @@ const styles = StyleSheet.create({
   });
 
 
-
-/*
-  return (
-    <View style={styles.container}>
-        <Text style={styles.heading}>{historyinfo}</Text>
-        <FlatList
-        ListHeaderComponent={<Text>Laskimen käyttöhistoria</Text>}
-        data={data}
-        keyExtractor={ (item, index) => index }
-        //renderItem={({ item }) => {return <Text>{item}</Text>}}
-        renderItem={({ item}) => <Text>{item}</Text>}
-        />
-
-        <View style={styles.buttons}>        
-          <Button onPress={() => allclear()} title='Clear'></Button>
-        </View> 
-
-    </View>      
-*/
 
